@@ -47,38 +47,4 @@ class Bicycle {
     
 }
 
-class Unicycle extends Bicycle {
-
-    protected static $wheels = 1;
-
-    public function bug_test() {
-        return $this->weight_kg;
-      }
-
-}
-
-$trek = new Bicycle;
-$trek->brand = 'Trek';
-$trek->model = 'Emonda';
-$trek->year = '2017';
-
-echo 'Bicycle count: ' . Bicycle::$instance_count . '<br />';
-echo 'Unicycle count: ' . Unicycle::$instance_count . '<br />';
-
-$bike = Bicycle::create();
-$uni = Unicycle::create();
-
-echo 'Bicycle count: ' . Bicycle::$instance_count . '<br />';
-echo 'Unicycle count: ' . Unicycle::$instance_count . '<br />';
-
-echo "<hr />";
-echo 'Categories: ' . implode(', ', Bicycle::CATEGORIES) . '<br />';
-$trek->category = Bicycle::CATEGORIES[0];
-echo 'Category: ' . $trek->category . '<br />';
-
-echo "<hr />";
-
-echo "Bicycle: " . Bicycle::wheel_details() . "<br />";
-echo "Unicycle: " . Unicycle::wheel_details() . "<br />";
-
 ?>
