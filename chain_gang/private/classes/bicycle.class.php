@@ -46,7 +46,7 @@ class Bicycle {
     }
 
     public function weight_kg() {
-        return $this->weight_kg . " kg";
+        return number_format($this->weight_kg, 2) . " kg";
     }
 
     public function set_wight_kg($value) {
@@ -54,7 +54,7 @@ class Bicycle {
     }
 
     public function weight_lbs() {
-        return $this->weight_kg * 2.2046226218 . " lbs";
+        return number_format($this->weight_kg * 2.2046226218, 2) . " lbs";
     }
 
     public function set_weight_lbs($value) {

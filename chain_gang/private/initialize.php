@@ -29,21 +29,22 @@
   // Load class definitions manually
 
   //Individually
-  // require_once('classes/bicycle.class.php');
+  require_once('classes/bicycle.class.php');
+  require_once('classes/parsecsv.class.php');
 
   //All classes in directory
-  foreach(glob('classes/*.class.php') as $file) {
-    require_once($file);
-  }
+  // foreach(glob('classes/*.class.php') as $file) {
+  //   require_once($file);
+  // }
 
   // Autoload class definitions
-  function my_autoload($class) {
-    if(preg_match('/\A\w+\Z/', $class)) {
-      include 'classes/' . $class . '.class.php';
-  }
+  // function my_autoload($class) {
+  //   if(preg_match('/\A\w+\Z/', $class)) {
+  //     include('classes/' . $class . '.class.php');
+  // }
 
-  spl_autoload_register('my_autoload');
+  // spl_autoload_register('my_autoload');
 
-  }
+  // }
 
 ?>
